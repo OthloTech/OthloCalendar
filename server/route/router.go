@@ -1,10 +1,11 @@
 package route
 
 import (
-    "github.com/OthloTech/OthloCalendar/server/api"
-    "github.com/OthloTech/OthloCalendar/server/db"
-    "github.com/OthloTech/OthloCalendar/server/handler"
-    othloMw "github.com/OthloTech/OthloCalendar/midleware"
+    //"github.com/OthloTech/OthloCalendar/server/api"
+    //"github.com/OthloTech/OthloCalendar/server/db"
+    //"github.com/OthloTech/OthloCalendar/server/handler"
+    "../handler"
+    //othloMw "github.com/OthloTech/OthloCalendar/midleware"
     "github.com/labstack/echo"
     echoMw "github.com/labstack/echo/middleware"
 )
@@ -30,12 +31,16 @@ func Init() *echo.Echo {
     e.Static("/", "dist")
 
     // Routes
-    v1 := e.Group("/api/v1")
-    {
-        v1.GET("/search", api.Search())
-        v1.POST("/style", api.PostStyle())
-        v1.GET("/style/:id", api.GetStyle())
-    }
+    //v1 := e.Group("/api/v1")
+    //{
+    //    v1.GET("/search", api.Search())
+    //    v1.POST("/style", api.PostStyle())
+    //    v1.GET("/style/:id", api.GetStyle())
+    //}
+
+    e.GET("/", func(c echo.Context) error {
+        return c.String(http.StatusOK, "Hello, World!\n")
+    })
 
     return e   
 }

@@ -2,8 +2,9 @@ package main
 
 import (
     "github.com/Sirupsen/logrus"
-    "github.com/OthloTech/OthloCalendar/server/route"
     "gtihub.com/labstack/echo/engine/fasthttp"
+    //"github.com/OthloTech/OthloCalendar/server/route"
+    "./route"
 )
 
 func init() {

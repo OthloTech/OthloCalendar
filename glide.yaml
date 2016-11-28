@@ -1,6 +1,9 @@
 package: OthloCalendar
 import:
-  - package: github.com/Sirupsen/logrus
-  - package: github.com/labstack/echo
-  subpackages:
-    - middleware
+- package: github.com/OthloTech/OthloCalendar
+- package: github.com/valyala/fasthttp
+- package: github.com/Sirupsen/logrus
+- package: github.com/labstack/echo
+subpackages:
+  - middleware
+  - engine
