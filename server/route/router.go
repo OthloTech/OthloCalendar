@@ -6,8 +6,7 @@ import (
     //"github.com/OthloTech/OthloCalendar/server/handler"
     "../handler"
     //othloMw "github.com/OthloTech/OthloCalendar/midleware"
-    "github.com/labstack/echo"
-    echoMw "github.com/labstack/echo/middleware"
+    "github.com/gin-gonic/gin"
 )
 
 func Init() *echo.Echo {

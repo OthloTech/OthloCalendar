@@ -2,9 +2,9 @@ package main
 
 import (
     "github.com/Sirupsen/logrus"
-    "gtihub.com/labstack/echo/engine/fasthttp"
-    //"github.com/OthloTech/OthloCalendar/server/route"
-    "./route"
+    "github.com/gin-gonic/gin"
+    "github.com/OthloTech/OthloCalendar/server/config"
+    "github.com/OthloTech/OthloCalendar/server/route"
 )
 
 func init() {
@@ -13,6 +13,7 @@ func init() {
 }
 
 func main() {
-    router := route.Init()
-    router.Run(fasthttp.New(":8888"))
+    config := config.GetConfig()
+    r := route.Init()
+    r.Run(config.GetString("server.port"))
 }
