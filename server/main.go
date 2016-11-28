@@ -1,14 +1,17 @@
 package main
 
 import (
-    "net/http"
-    "github.com/labstack/echo"
+    "github.com/Sirupsen/logrus"
+    "github.com/OthloTech/OthloCalendar/server/route"
+    "gtihub.com/labstack/echo/engine/fasthttp"
 )
 
+func init() {
+    logrus.SetLevel(logrus.DebugLevel)
+    logrus.SetFormatter(&logrus.JSONFormatter{})
+}
+
 func main() {
-	e := echo.New()
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
-	e.Logger.Fatal(e.Start(":1323"))
+    router := route.Init()
+    router.Run(fasthttp.New(":8888"))
 }

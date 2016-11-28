@@ -4,7 +4,11 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --hot --inline",
+    "dist": "webpack -p -d",
+    "viewdist": "light-server -s . -p 7000",
+    "lint": "eslint --ext .js,.es6,.html src/*",
+    "start": "go run server/main.go"
   },
   "repository": {
     "type": "git",
@@ -20,6 +24,7 @@
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
     "jade": "^1.11.0",
+    "pug": "^2.0.0-beta6",
     "riot": "^3.0.1",
     "riotcontrol": "0.0.3",
     "riotjs-loader": "^3.0.0",

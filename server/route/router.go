@@ -16,6 +16,7 @@ func Init() *echo.Echo {
 
     // Set Bundle MiddleWare
     e.Use(echoMw.Logger())
+    e.Use(echoMw.Recover())
     e.Use(echoMw.Gzip())
     e.Use(echoMw.CORSWithConfig(echoMw.CORSConfig{
         AllowOrigins: []string{"*"},
@@ -25,6 +26,8 @@ func Init() *echo.Echo {
 
     // Set Custom MiddleWare
     e.Use(othloMw.TransactionHandler(db.Init()))
+
+    e.Static("/", "dist")
 
     // Routes
     v1 := e.Group("/api/v1")
@@ -36,3 +39,8 @@ func Init() *echo.Echo {
 
     return e   
 }
+
+// func Index(c echo.Context) error {
+//     return c.HTML(http.StatusOK, "index.html", )
+//     return c.Render(http.StatusOK, )
+// }
