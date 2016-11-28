@@ -3,8 +3,7 @@ package route
 import (
     //"github.com/OthloTech/OthloCalendar/server/api"
     //"github.com/OthloTech/OthloCalendar/server/db"
-    //"github.com/OthloTech/OthloCalendar/server/handler"
-    "../handler"
+    "github.com/OthloTech/OthloCalendar/server/handler"å
     //othloMw "github.com/OthloTech/OthloCalendar/midleware"
     "github.com/gin-gonic/gin"
 )

@@ -1,6 +1,44 @@
-hash: 2ec298247a15af5ce6b97fc795ded81797e5fb32dc96e884ff72bfa03b2a1d90
-updated: 2016-11-29T01:37:03.454750385+09:00
+hash: b3160d46694400722cec277c02c22a93b7153402fe545ca3d60f8a5d570ea9d8
+updated: 2016-11-29T05:36:21.801755738+09:00
 imports:
+- name: github.com/fsnotify/fsnotify
+  version: fd9ec7deca8bf46ecd2a795baaacf2b3a9be1197
+- name: github.com/gin-gonic/gin
+  version: bb159f9260a262fccbdbd6f37f8575d1e7e6aaa0
+  subpackages:
+  - binding
+  - render
+- name: github.com/go-sql-driver/mysql
+  version: abfd04d323c28c5c5683c2beb877fae36491d5a8
+- name: github.com/gocraft/dbr
+  version: 10fa49bf1ee63a0f822283ef9805d818f9e84742
+  subpackages:
+  - dialect
+- name: github.com/golang/protobuf
+  version: 2402d76f3d41f928c7902a765dfc872356dd3aad
+  subpackages:
+  - proto
+- name: github.com/hashicorp/hcl
+  version: 7cb7455c285ca3bf3362aa4ba6a06a6d6f5c3ba0
+  subpackages:
+  - hcl/ast
+  - hcl/parser
+  - hcl/scanner
+  - hcl/strconv
+  - hcl/token
+  - json/parser
+  - json/scanner
+  - json/token
+- name: github.com/klauspost/compress
+  version: e3b7981a12dd3cab49afa1d3a50e715846f23732
+  subpackages:
+  - flate
+  - gzip
+  - zlib
+- name: github.com/klauspost/cpuid
+  version: 09cded8978dc9e80714c4d85b0322337b0a1e5e0
+- name: github.com/klauspost/crc32
+  version: cb6bfca970f6908083f26f39a79009d608efd5cd
 - name: github.com/labstack/echo
   version: cd2530ea098106338b888f4fb66e966efa2fd75e
 - name: github.com/labstack/gommon
@@ -8,16 +46,52 @@ imports:
   subpackages:
   - color
   - log
+- name: github.com/magiconair/properties
+  version: 9c47895dc1ce54302908ab8a43385d1f5df2c11c
+- name: github.com/manucorporat/sse
+  version: ee05b128a739a0fb76c7ebd3ae4810c1de808d6d
 - name: github.com/mattn/go-colorable
   version: d228849504861217f796da67fae4f6e347643f15
 - name: github.com/mattn/go-isatty
   version: 30a891c33c7cde7b02a981314b4228ec99380cca
 - name: github.com/miekg/dns
   version: 271c58e0c14f552178ea321a545ff9af38930f39
+- name: github.com/mitchellh/mapstructure
+  version: f3009df150dadf309fdee4a54ed65c124afad715
+- name: github.com/OthloTech/OthloCalendar
+  version: 031aee0e753d82f0b1844970b95ce3364ea18262
+  subpackages:
+  - server/config
+  - server/route
+- name: github.com/pelletier/go-buffruneio
+  version: df1e16fde7fc330a0ca68167c23bf7ed6ac31d6d
+- name: github.com/pelletier/go-toml
+  version: 7cb988051d5045890cb91402a0b5fddc76c627bc
 - name: github.com/rsc/letsencrypt
   version: 76104d26167d38b6a0010f42bfc8ec5487742e8b
+- name: github.com/Sirupsen/logrus
+  version: a437dfd2463eaedbec3dfe443e477d3b0a810b3f
+- name: github.com/spf13/afero
+  version: 06b7e5f50606ecd49148a01a6008942d9b669217
+  subpackages:
+  - mem
+- name: github.com/spf13/cast
+  version: 24b6558033ffe202bf42f0f3b870dcc798dd2ba8
+- name: github.com/spf13/jwalterweatherman
+  version: 33c24e77fb80341fe7130ee7c594256ff08ccc46
+- name: github.com/spf13/pflag
+  version: 5ccb023bc27df288a957c5e994cd44fd19619465
+- name: github.com/spf13/viper
+  version: 651d9d916abc3c3d6a91a12549495caba5edffd2
 - name: github.com/tylerb/graceful
   version: 4df1190835320af7076dfcf27b3d071fd3612caf
+- name: github.com/valyala/bytebufferpool
+  version: e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7
+- name: github.com/valyala/fasthttp
+  version: 1c39678a4dd0122de1b9a7e14e49b3e99b7d60b9
+  subpackages:
+  - fasthttputil
+  - stackless
 - name: github.com/valyala/fasttemplate
   version: 3b874956e03f1636d171bda64b130f9135f42cff
 - name: github.com/xenolf/lego
@@ -29,7 +103,7 @@ imports:
   subpackages:
   - ocsp
 - name: golang.org/x/net
-  version: 4971afdc2f162e82d185353533d3cf16188a9f4e
+  version: f315505cf3349909cdf013ea56690da34e96a451
   subpackages:
   - context
   - publicsuffix
@@ -37,13 +111,22 @@ imports:
   version: 30237cf4eefd639b184d1f2cb77a581ea0be8947
   subpackages:
   - unix
+- name: golang.org/x/text
+  version: b01949dc0793a9af5e4cb3fce4d42999e76e8ca1
+  subpackages:
+  - transform
+  - unicode/norm
 - name: golang.org/x/time
   version: f51c12702a4d776e4c1fa9b0fabab841babae631
   subpackages:
   - rate
+- name: gopkg.in/go-playground/validator.v8
+  version: c193cecd124b5cc722d7ee5538e945bdb3348435
 - name: gopkg.in/square/go-jose.v1
   version: aa2e30fdd1fe9dd3394119af66451ae790d50e0d
   subpackages:
   - cipher
   - json
+- name: gopkg.in/yaml.v2
+  version: a5b47d31c556af34a302ce5d659e6fea44d90de0
 testImports: []

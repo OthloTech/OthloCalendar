@@ -2,7 +2,7 @@ package db
 
 import (
     "github.com/Sirupsen/logrus"
-    "github.com/OthloTech/OthloCalendar/server/conf"
+    "github.com/OthloTech/OthloCalendar/server/config"
     _ "github.com/go-sql-driver/mysql"
     "github.com/gocraft/dbr"
 )
