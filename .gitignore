@@ -25,4 +25,5 @@ _testmain.go
 
 .envrc
 vendor/
-
+node_modules
+*.log

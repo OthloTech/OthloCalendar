@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/OthloTech/OthloCalendar/issues"
   },
-  "homepage": "https://github.com/OthloTech/OthloCalendar#readme"
+  "homepage": "https://github.com/OthloTech/OthloCalendar#readme",
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "jade": "^1.11.0",
+    "riot": "^3.0.1",
+    "riotcontrol": "0.0.3",
+    "riotjs-loader": "^3.0.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
