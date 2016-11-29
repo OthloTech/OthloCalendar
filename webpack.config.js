@@ -2,7 +2,7 @@ const webpack = require('webpack')
 
 module.exports = {
   cache: true,
-  entry: ['./client/js/app'],
+  entry: ['./client/index'],
   output: {
     path: __dirname + '/dist',
     filename: 'bundle.js',
@@ -16,15 +16,19 @@ module.exports = {
   ],
   module: {
     preLoaders: [
-      {test: /\.tag$/, exclude: /node_modules/, loader: 'riotjs-loader', query: {template: 'jade', type: 'babel'}}
+      { test: /\.tag$/, exclude: /node_modules/, loader: 'riotjs-loader', query: { template: 'jade', type: 'babel' } }
     ],
     loaders: [
-      {test: /\.css$/, include: /src/, loader: 'style!css'},
-      {test: /\.js|\.tag$/, exclude: /node_modules/, loader: 'babel-loader'}
+      { test: /\.scss$/, loaders: ["style", "css", "sass"] },
+      { test: /\.js|\.tag$/, exclude: /node_modules/, loader: 'babel-loader' }
     ]
   },
   devServer: {
-    port: 5555
+    port: 5555,
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    progress: true
   },
   devtool: 'source-map'
 }

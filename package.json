@@ -31,8 +31,10 @@
     "materialize-loader": "^1.1.1",
     "pug": "^2.0.0-beta6",
     "riot": "^3.0.1",
+    "riot-mui": "0.0.17",
     "riotcontrol": "0.0.3",
     "riotjs-loader": "^3.0.0",
+    "scss-loader": "0.0.1",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
   }
