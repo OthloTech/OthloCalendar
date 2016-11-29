@@ -1,10 +1,9 @@
 package main
 
 import (
-	"github.com/OthloTech/OthloCalendar/server/config"
+	//"github.com/OthloTech/OthloCalendar/server/config"
 	"github.com/OthloTech/OthloCalendar/server/route"
 	"github.com/Sirupsen/logrus"
-	"github.com/gin-gonic/gin"
 )
 
 func init() {

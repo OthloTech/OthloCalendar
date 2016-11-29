@@ -1,11 +1,19 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>App {{define "title"}}{{.Title}}{{end}} </title>
-</head>
-<body>
-  <app></app>
-  <script src="./bundle.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>${title} {{define "title"}}{{.Title}}{{end}}</title>
+    <meta name="description" content="${description}" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.5.0/riot+compiler.min.js"></script>
+    <script src="./bundle.js"></script>
+
+	<style>${style}</style>
+  </head>
+
+  <body>
+  	<app title="Hello, Riot.js"></app>
+  </body>
 </html>
