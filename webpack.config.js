@@ -2,7 +2,7 @@ const webpack = require('webpack')
 
 module.exports = {
   cache: true,
-  entry: ['./src/app'],
+  entry: ['./client/app'],
   output: {
     path: __dirname + '/dist',
     filename: 'bundle.js',

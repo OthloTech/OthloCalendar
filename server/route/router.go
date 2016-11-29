@@ -64,9 +64,9 @@ func Init() *gin.Engine {
 	//router.Static("/dist", "../dist")
 	router.Static("/bundle.js", "dist/bundle.js")
     router.Static("/1", "../dist/style.css")
-    //router.Static("/2", "../../dist/style.css")
+    router.Static("/2", "../../dist/style.css")
 	router.Static("/3", "dist/style.css")
-    //router.Static("/4", "../../../dist/style.css")
+    router.Static("/4", "../../../dist/style.css")
 	router.GET("/", IndexRoute)
 
 	return router
