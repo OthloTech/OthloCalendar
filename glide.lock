@@ -1,5 +1,5 @@
 hash: afb9fa1907f105a6d2c5cb13e8008df61aa1a1e816ac5584eddfee890284fb3f
-updated: 2016-11-30T02:01:06.090638931+09:00
+updated: 2016-11-30T02:19:22.496687806+09:00
 imports:
 - name: github.com/fsnotify/fsnotify
   version: fd9ec7deca8bf46ecd2a795baaacf2b3a9be1197
@@ -38,9 +38,11 @@ imports:
 - name: github.com/mjibson/goon
   version: 0ed1ebf48a18375ca62c5a033a6f5bc4c59997f4
 - name: github.com/OthloTech/OthloCalendar
-  version: f76650c0ef0736219010f7006babb40c5ed0603d
+  version: b632d1fdba6e3b24df52e094132edf47633c490f
   subpackages:
   - server/config
+  - server/controllers
+  - server/models
   - server/route
 - name: github.com/pelletier/go-buffruneio
   version: df1e16fde7fc330a0ca68167c23bf7ed6ac31d6d
