@@ -29,10 +29,10 @@ func CORSMiddleware() gin.HandlerFunc {
 }
 
 func loadTemplates() {
-	var baseTemplate = "../../dist/templates/layout/_base.html"
+	var baseTemplate = "dist/templates/layout/_base.html"
 	templates = make(map[string]*template.Template)
 
-	templates["index"] = template.Must(template.ParseFiles(baseTemplate, "../../dist/index.html"))
+	templates["index"] = template.Must(template.ParseFiles(baseTemplate, "dist/index.html"))
 }
 
 func IndexRoute(g *gin.Context) {
@@ -63,10 +63,10 @@ func Init() *gin.Engine {
 
 	//router.Static("/dist", "../dist")
 	router.Static("/bundle.js", "dist/bundle.js")
-    router.Static("/", "../dist/style.css")
-    router.Static("/2", "../../dist/style.css")
-	router.Static("/3", "./dist/style.css")
-    router.Static("/4", "../../../dist/style.css")
+    router.Static("/1", "../dist/style.css")
+    //router.Static("/2", "../../dist/style.css")
+	router.Static("/3", "dist/style.css")
+    //router.Static("/4", "../../../dist/style.css")
 	router.GET("/", IndexRoute)
 
 	return router

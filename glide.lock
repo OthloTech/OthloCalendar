@@ -1,5 +1,5 @@
 hash: afb9fa1907f105a6d2c5cb13e8008df61aa1a1e816ac5584eddfee890284fb3f
-updated: 2016-11-30T02:30:09.528392767+09:00
+updated: 2016-11-30T02:51:35.798818623+09:00
 imports:
 - name: github.com/fsnotify/fsnotify
   version: fd9ec7deca8bf46ecd2a795baaacf2b3a9be1197
@@ -38,7 +38,7 @@ imports:
 - name: github.com/mjibson/goon
   version: 0ed1ebf48a18375ca62c5a033a6f5bc4c59997f4
 - name: github.com/OthloTech/OthloCalendar
-  version: 6211f6468a28d5aa799d0bd2ad51d62c770a28b1
+  version: 5ef2f642a04ceade34f458f6ec8ba4cec93558f9
   subpackages:
   - server/config
   - server/controllers
