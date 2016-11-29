@@ -13,7 +13,8 @@ func init() {
 }
 
 func main() {
-    config := config.GetConfig()
+    //config := config.GetConfig()
     r := route.Init()
-    r.Run(config.GetString("server.port"))
+    r.Run(":8080")
+    //r.Run(config.GetString("server.port"))
 }

@@ -8,6 +8,9 @@ import (
     "github.com/gin-gonic/gin"
 )
 
+var server *gin.Engine
+var templates map[string]*template.Template
+
 func CORSMiddleware() gin.HandlerFunc {
     return func(c *gin.Context) {
         c.Writer.Header().Set("Access-Control-Allow-Origin", "http://localhost")
@@ -38,10 +41,7 @@ func IndexRoute(g *gin.Context) {
     g.HTML(200, "_base.html", nil)
 }
 
-var server *gin.Engine
-var templates = map[string]*template.Template
-
-func Init() *echo.Echo {
+func Init() *gin.Engine {
     loadTemplates()
 
     router := gin.Default()
@@ -51,7 +51,6 @@ func Init() *echo.Echo {
 
     //health := new(controllers.HealthController)
     //router.GET("/health", health.Status)
-    router.Use(AuthMiddleware())
 
     v1 := router.Group("/api/v1")
     {
