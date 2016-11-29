@@ -10,7 +10,7 @@ type EventController struct{}
 var eventModel = new(models.EventModel)
 
 func (ctrl EventController) Search(c *gin.Context) {
-	keyword = c.Param("keyword")
+	keyword := c.Param("keyword")
 	c.JSON(200, gin.H{"keyword": keyword})
 }
 
