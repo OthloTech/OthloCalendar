@@ -1,8 +1,7 @@
 'use strict'
 
-//import './tags/index.js'
 const riot = require('riot')
-require('./tags/app.tag')
+require('./tags/index.js')
 
 // const DummyStore = require('./stores/dummy-store')
 // const dispatcher = require('./stores/dispatcher')
