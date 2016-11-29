@@ -1,11 +1,10 @@
 package route
 
 import (
-	//"github.com/OthloTech/OthloCalendar/server/api"
-	//"github.com/OthloTech/OthloCalendar/server/db"
-	"fmt"
+    "fmt"
+    "html/template"
+	"github.com/OthloTech/OthloCalendar/server/controllers"
 	"github.com/gin-gonic/gin"
-	"html/template"
 )
 
 var server *gin.Engine
@@ -49,12 +48,15 @@ func Init() *gin.Engine {
 	router.Use(gin.Recovery())
 	router.Use(CORSMiddleware())
 
+    event := new(controllers.EventController)
+
+
 	//health := new(controllers.HealthController)
 	//router.GET("/health", health.Status)
 
-	//v1 := router.Group("/api/v1")
+	v1 := router.Group("/api/v1")
 	{
-		//v1.GET("/search", api.Search)
+		v1.GET("/search", event.Search)
 		//v1.POST("/style", api.PostStyle)
 		//v1.GET("/style/:id", api.GetStyle)
 	}
