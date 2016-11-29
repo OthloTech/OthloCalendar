@@ -1,7 +1,8 @@
 'use strict'
 
-const riot = require('riot')
+require('./materialize.js')
 require('./tags/index.js')
+const riot = require('riot')
 
 // const DummyStore = require('./stores/dummy-store')
 // const dispatcher = require('./stores/dispatcher')
