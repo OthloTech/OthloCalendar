@@ -1,6 +1,9 @@
 'use strict'
 
+//import './tags/index.js'
 const riot = require('riot')
+require('./tags/app.tag')
+
 // const DummyStore = require('./stores/dummy-store')
 // const dispatcher = require('./stores/dispatcher')
 
@@ -11,6 +14,7 @@ const riot = require('riot')
 // context.keys().forEach((key) => {
 //   context(key)
 // })
+console.log(1)
 
 riot.mount('app')
 //riot.mount('app', {store: dummyStore})
