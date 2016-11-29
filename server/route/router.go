@@ -3,6 +3,8 @@ package route
 import (
     //"github.com/OthloTech/OthloCalendar/server/api"
     //"github.com/OthloTech/OthloCalendar/server/db"
+    "fmt"
+    "html/template"
     "github.com/gin-gonic/gin"
 )
 
