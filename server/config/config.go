@@ -28,7 +28,7 @@ func Init(env string) {
 
 func relativePath(basedir string, path *string) {
     p := *path
-    if p != "" && p[0] != "/" {
+    if p != "" && p[0] != '/' {
         *path = filepath.Join(basedir, p)
     }
 }
