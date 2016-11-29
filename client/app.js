@@ -13,7 +13,6 @@ require('./tags/index.js')
 // context.keys().forEach((key) => {
 //   context(key)
 // })
-console.log(1)
 
 riot.mount('app')
 //riot.mount('app', {store: dummyStore})
