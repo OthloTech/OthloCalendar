@@ -6,3 +6,4 @@ import:
 - package: github.com/valyala/fasthttp
 - package: github.com/Sirupsen/logrus
 - package: github.com/mjibson/goon
+- package: github.com/davecgh/go-spew/spew

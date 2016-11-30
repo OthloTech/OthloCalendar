@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"time"
+	"github.com/davecgh/go-spew/spew"
 	//"strings"
 )
 
@@ -18,21 +19,23 @@ func main() {
 	now := time.Now()
 	ym := fmt.Sprintf("%v%v", now.Year(), int(now.Month()))
 
-	// events, err := connpass("python", ym)
+	events, err := connpass("python", ym)
+	if err != nil {
+		fmt.Println(err)
+	}
+	for i, event := range events {
+		spew.Dump(event)
+		fmt.Println("=======")
+		//fmt.Print(fmt.Sprintf("index:%d,value:%s\n", i, event.Title))
+	}
+
+	// events, err := atnd("python", ym)
 	// if err != nil {
 	// 	fmt.Println(err)
 	// }
 	// for i, event := range events {
  //  		fmt.Print(fmt.Sprintf("index:%d,value:%s\n", i, event.Title))
-	// }
-
-	events, err := atnd("python", ym)
-	if err != nil {
-		fmt.Println(err)
-	}
-	for i, event := range events {
-  		fmt.Print(fmt.Sprintf("index:%d,value:%s\n", i, event.Title))
-	}	
+	// }	
 }
 
 /*

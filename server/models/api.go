@@ -1,6 +1,6 @@
-/*
 package models
 
+/*
 import (
 	"compress/gzip"
 	"io"
