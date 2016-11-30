@@ -1,5 +1,5 @@
 hash: b9a8cbc79fcb0c244e6b5b4bd3babcae2132c722ca7b97afd3edb3fcf778a8f9
-updated: 2016-11-30T21:09:35.419251562+09:00
+updated: 2016-11-30T21:11:07.266193631+09:00
 imports:
 - name: github.com/davecgh/go-spew
   version: 346938d642f2ec3594ed81d874461961cd0faa76
@@ -21,7 +21,7 @@ imports:
 - name: github.com/mjibson/goon
   version: 0ed1ebf48a18375ca62c5a033a6f5bc4c59997f4
 - name: github.com/OthloTech/OthloCalendar
-  version: a12cbe52accad8f66da5c22391f8a8a855c93111
+  version: 933696c0445714b628fcfe1efe206b3923fcf695
   subpackages:
   - server/config
   - server/controllers
