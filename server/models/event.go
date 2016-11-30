@@ -2,7 +2,7 @@ package models
 
 import (
 	//"errors"
-	//"time"
+	"time"
 )
 
 type Event struct {
