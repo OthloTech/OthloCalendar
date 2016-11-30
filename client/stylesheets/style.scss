@@ -1,3 +1,105 @@
 .othlo-layout {
   margin-top: 64px;
+  width: 100%;
+
+  .logo-font {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1;
+    color: #767777;
+    font-weight: 500;
+  }
+
+  .othlo-hero-section {
+    position: relative;
+    height: 800px;
+    width: auto;
+    background-color: #f3f3f3;
+
+    .othlo-slogan {
+      font-size: 60px;
+      padding-top: 160px;
+    }
+
+    .othlo-sub-slogan {
+      font-size: 21px;
+      padding-top: 30px;
+    }
+
+    .get-started {
+      font-size: 21px;
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+
+    button {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .othlo-feature-section {
+    width: 100%;
+
+    .feature-section {
+      height: 300px;
+      width: 100%;
+      padding: 20px;
+      position: relative;
+
+      .mdl-grid {
+        height: 100%;
+        padding: 0;
+      }
+
+      .feature-text {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        padding: 50px;
+
+        .logo-font {
+          font-size: 30px;
+        }
+      }
+
+      .othlo-feature-image.mdl-card {
+        height: 100%;
+        width: auto;
+
+        .mdl-card__actions {
+          height: 52px;
+          padding: 16px;
+          background: rgba(0, 0, 0, 0.2);
+        }
+
+        .othlo-feature-image__filename {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+
+      &.feature-first {
+        background-color: #eee;
+
+        .othlo-feature-image {
+          background: url('https://www.smartfile.com/blog/wp-content/uploads/2013/05/easyway.jpg') center / cover;
+        }
+      }
+
+      &.feature-second {
+        background-color: #f6f6f6;
+
+        .othlo-feature-image {
+          background: url('https://images.unsplash.com/photo-1454165205744-3b78555e5572?dpr=1&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=') center / cover;
+        }
+      }
+    }
+  }
+
+  .othlo-create-section {
+    height: 500px;
+    background-color: #666;
+  }
 }
