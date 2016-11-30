@@ -1,5 +1,5 @@
 hash: afb9fa1907f105a6d2c5cb13e8008df61aa1a1e816ac5584eddfee890284fb3f
-updated: 2016-11-30T15:28:38.513222613+09:00
+updated: 2016-11-30T15:31:20.694071218+09:00
 imports:
 - name: github.com/gin-gonic/gin
   version: bb159f9260a262fccbdbd6f37f8575d1e7e6aaa0
@@ -17,7 +17,7 @@ imports:
 - name: github.com/mjibson/goon
   version: 0ed1ebf48a18375ca62c5a033a6f5bc4c59997f4
 - name: github.com/OthloTech/OthloCalendar
-  version: 4019fbcb366ade9ec80917e30ee6d1359ea414c8
+  version: f9d067d24199e1d7e6072126cdc549887243aa6b
   subpackages:
   - server/config
   - server/controllers

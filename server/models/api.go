@@ -1,3 +1,4 @@
+/*
 package models
 
 import (
@@ -78,3 +79,4 @@ func request(method, endpoint string, headers *map[string]string, reqBody string
 	}
 	return string(body), nil
 }
+*/
