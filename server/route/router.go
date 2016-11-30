@@ -40,9 +40,7 @@ func IndexRoute(c *gin.Context) {
 	//server.SetHTMLTemplate(templates["index"])
 	//g.HTML(http.StatusOK, "_base.html", nil)
 
-	c.HTML(http.StatusOK, "index.html", gin.H{
-		"title": "pokohide"
-	})
+	c.HTML(http.StatusOK, "index.html", gin.H{"title": "pokohide"})
 }
 
 func Init() *gin.Engine {
