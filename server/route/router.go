@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var server *gin.Engine
+//var server *gin.Engine
 var templates map[string]*template.Template
 
 func CORSMiddleware() gin.HandlerFunc {
@@ -30,30 +30,36 @@ func CORSMiddleware() gin.HandlerFunc {
 }
 
 func loadTemplates() {
-	var baseTemplate = "dist/templates/layout/_base.html"
+	var baseTemplate = "../../dist/templates/layout/_base.html"
 	templates = make(map[string]*template.Template)
 
-	templates["index"] = template.Must(template.ParseFiles(baseTemplate, "dist/index.html"))
+	templates["index"] = template.Must(template.ParseFiles(baseTemplate, "../../dist/index.html"))
 }
 
-func IndexRoute(g *gin.Context) {
-	server.SetHTMLTemplate(templates["index"])
-	g.HTML(http.StatusOK, "_base.html", nil)
+func IndexRoute(c *gin.Context) {
+	//server.SetHTMLTemplate(templates["index"])
+	//g.HTML(http.StatusOK, "_base.html", nil)
+
+	c.HTML(http.StatusOK, "index.html", gin.H{
+		"title": "pokohide"
+	})
 }
 
 func Init() *gin.Engine {
-	loadTemplates()
+	//loadTemplates()
 
 	router := gin.Default()
 	router.Use(gin.Logger())
 	router.Use(gin.Recovery())
 	router.Use(CORSMiddleware())
 
+	router.LoadHTMLGlob("../../dist/**/*.html")
+
     event := new(controllers.EventController)
-
-
 	health := new(controllers.HealthController)
+
 	router.GET("/health", health.Status)
+	router.GET("/", IndexRoute)
 
 	v1 := router.Group("/api/v1")
 	{
@@ -73,7 +79,5 @@ func Init() *gin.Engine {
  //    router.Static("/2", "../../dist/style.css")
 	// router.Static("/3", "dist/style.css")
  //    router.Static("/4", "../../../dist/style.css")
-	//git router.GET("/", IndexRoute)
-
 	return router
 }
