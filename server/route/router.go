@@ -37,10 +37,11 @@ func loadTemplates() {
 }
 
 func IndexRoute(c *gin.Context) {
-	//server.SetHTMLTemplate(templates["index"])
-	//g.HTML(http.StatusOK, "_base.html", nil)
-
 	c.HTML(http.StatusOK, "index.html", gin.H{"title": "pokohide"})
+}
+
+func EmbedRoute(c *gin.Context) {
+	c.HTML(http.StatusOK, "embed.html", gin.H{})
 }
 
 func Init() *gin.Engine {
@@ -57,6 +58,7 @@ func Init() *gin.Engine {
 	health := new(controllers.HealthController)
 
 	router.GET("/health", health.Status)
+	router.GET("/embed", EmbedRoute)
 	router.GET("/", IndexRoute)
 
 	v1 := router.Group("/api/v1")
@@ -66,5 +68,6 @@ func Init() *gin.Engine {
 		//v1.GET("/style/:id", api.GetStyle)
 	}
 	router.StaticFile("/bundle.js", "dist/bundle.js")
+	router.StaticFile("/bundle.js.map", "dist/bundle.js.map")
 	return router
 }
