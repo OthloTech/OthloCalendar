@@ -51,7 +51,7 @@ func Init() *gin.Engine {
 	router.Use(gin.Recovery())
 	router.Use(CORSMiddleware())
 
-	router.LoadHTMLGlob("../../dist/*")
+	router.LoadHTMLGlob("../dist/*")
 
     event := new(controllers.EventController)
 	health := new(controllers.HealthController)
