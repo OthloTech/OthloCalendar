@@ -9,6 +9,7 @@ import (
 	"net/url"
 	"strconv"
 	"strings"
+	"time"
 	"github.com/gin-gonic/gin"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/OthloTech/OthloCalendar/server/models"
@@ -17,6 +18,7 @@ import (
 const (
 	connpassEndpoint = "https://connpass.com/api/v1/event/"
 	atndEndpoint     = "http://api.atnd.org/events/"
+	zusaarEndpoint   = "http://www.zusaar.com/api/event/"
 )
 
 type EventController struct{}
@@ -40,7 +42,6 @@ func (ctrl EventController) Search(c *gin.Context) {
 	if i := c.Query("event_id"); i {
 		query.EventId = strings.Split(i, ",")
 	}
-
 
 	now := time.Now()
 	query.Time = []Time{Time{Year: now.Year(), Month: int(now.Month())}}
