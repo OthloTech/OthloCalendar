@@ -51,8 +51,8 @@ func Init() *gin.Engine {
     event := new(controllers.EventController)
 
 
-	//health := new(controllers.HealthController)
-	//router.GET("/health", health.Status)
+	health := new(controllers.HealthController)
+	router.GET("/health", health.Status)
 
 	v1 := router.Group("/api/v1")
 	{
