@@ -30,7 +30,7 @@ const (
 )
 
 func init() {
-	level = logLevel(math.Min(float64(trace), math.Max(float64(fatal), float64(config.NewConfig().LogLevel))))
+	level := logLevel(math.Min(float64(trace), math.Max(float64(fatal), float64(config.NewConfig().LogLevel))))
 
 	handle := ioutil.Discard
 	if level >= fatal {
