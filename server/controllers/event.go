@@ -28,27 +28,27 @@ var eventModel = new(models.EventModel)
 
 func (ctrl EventController) Search(c *gin.Context) {
 	query := Query{Start: 1, Order: CREATE}
-	if k := c.Query("keyword"); k {
-		query.Keyword = strings.Split(k, ",")
+	if k := c.Query("keyword"); len(k) != 0 {
+		query.KeywordAnd = strings.Split(k, ",")
 	}
-	if k := c.Query("keyword_or"); k {
+	if k := c.Query("keyword_or"); len(k) != 0 {
 		query.KeywordOr = strings.Split(k, ",")
 	}
-	if o := c.Query("owner"); o {
+	if o := c.Query("owner"); len(o) != 0 {
 		query.Owner = strings.Split(o, ",")
 	}
-	if p := c.Query("participant"); p {
+	if p := c.Query("participant"); len(p) != 0 {
 		query.Participant = strings.Split(p, ",")
 	}
-	if i := c.Query("event_id"); i {
-		query.EventId = strings.Split(i, ",")
-	}
+	//if i := c.Query("event_id"); len(i) != 0 {
+	//	query.EventId = strings.Split(i, ",")
+	//}
 
 	now := time.Now()
 	query.Time = []Time{Time{Year: now.Year(), Month: int(now.Month())}}
 	query.Count = 100
 
-	var events []Event
+	var events []Events
 
 	res, err := query.Connpass()
 	if err != nil {
