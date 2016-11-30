@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
-    "dist": "webpack -p -d",
+    "dist": "webpack -p -d --progress",
     "viewdist": "light-server -s . -p 7000",
     "lint": "eslint --ext .js,.es6,.html src/*",
     "start": "go run server/main.go"
@@ -21,13 +21,20 @@
   },
   "homepage": "https://github.com/OthloTech/OthloCalendar#readme",
   "dependencies": {
+    "babel": "^6.5.2",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
+    "babel-preset-es2015-riot": "^1.1.0",
+    "concurrently": "^3.1.0",
     "jade": "^1.11.0",
+    "materialize-css": "^0.97.8",
+    "materialize-loader": "^1.1.1",
     "pug": "^2.0.0-beta6",
     "riot": "^3.0.1",
+    "riot-mui": "0.0.17",
     "riotcontrol": "0.0.3",
     "riotjs-loader": "^3.0.0",
+    "scss-loader": "0.0.1",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
   }

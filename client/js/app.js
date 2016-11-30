@@ -1,7 +1,8 @@
 'use strict'
 
-const riot = require('riot')
+require('./materialize.js')
 require('./tags/index.js')
+const riot = require('riot')
 
 // const DummyStore = require('./stores/dummy-store')
 // const dispatcher = require('./stores/dispatcher')
@@ -13,7 +14,6 @@ require('./tags/index.js')
 // context.keys().forEach((key) => {
 //   context(key)
 // })
-console.log(1)
 
 riot.mount('app')
 //riot.mount('app', {store: dummyStore})

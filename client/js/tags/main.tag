@@ -1,16 +1,14 @@
-app
+main
   .ui.container
     h1 Hello world
+    h2 okokok
     article
       ul
         li.list(each="{ name, i in items }")
           {name}
-    sample
 
   script(type='text/javascript').
-    // update the current time
     console.log('ok')
-
     this.items = [1, 2, 3, 4, 5]
 
   style(scoped).
