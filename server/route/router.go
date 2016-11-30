@@ -61,7 +61,7 @@ func Init() *gin.Engine {
 		//v1.GET("/style/:id", api.GetStyle)
 	}
 
-	router.Static("/", "../../dist")
+	router.Static("/assets", "../../dist")
 	// router.Static("/bundle.js", "dist/bundle.js")
  //    router.Static("/1", "../dist/style.css")
  //    router.Static("/2", "../../dist/style.css")
