@@ -53,7 +53,7 @@ func (ctrl EventController) Search(c *gin.Context) {
 	res, err := query.Connpass()
 	if err != nil {
 		fmt.Errorf("Failed to execute search: %v.", err)
-		c.JSON(400, gin.H{"message": "bad request"})
+		c.JSON(http.StatusBadRequest, gin.H{"message": "bad request"})
 		c.Abort()
 		return
 	}
@@ -63,10 +63,7 @@ func (ctrl EventController) Search(c *gin.Context) {
 		spew.Dump(e)
 	}
 
-	c.JSON(200, gin.H{
-		"message": "Event found",
-		"events": events
-	})
+	c.JSON(http.StatusOK, gin.H{"message": "Event found", "events": events})
 
 
 	// for {
