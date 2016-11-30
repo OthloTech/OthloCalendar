@@ -62,17 +62,17 @@ func Init() *gin.Engine {
 	}
 
 	router.Static("/assets", "../dist")
-	router.StaticFile("/1", "/dits/bundle.js")
-	router.StaticFile("/2", "../dist/bundle.js")
-	router.StaticFile("/3", "../../dist/bundle.js")
-	router.StaticFile("/4", "../../../dist/bundle.js")
-	router.StaticFile("/5", "bundle.js")
+	router.StaticFile("/1/", "/dits/bundle.js")
+	router.StaticFile("/2/", "../dist/bundle.js")
+	router.StaticFile("/3/", "../../dist/bundle.js")
+	router.StaticFile("/4/", "../../../dist/bundle.js")
+	router.StaticFile("/5/", "bundle.js")
 	// router.Static("/bundle.js", "dist/bundle.js")
  //    router.Static("/1", "../dist/style.css")
  //    router.Static("/2", "../../dist/style.css")
 	// router.Static("/3", "dist/style.css")
  //    router.Static("/4", "../../../dist/style.css")
-	//router.GET("/", IndexRoute)
+	//git router.GET("/", IndexRoute)
 
 	return router
 }
