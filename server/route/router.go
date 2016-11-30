@@ -1,8 +1,9 @@
 package route
 
 import (
-    "fmt"
-    "html/template"
+	"fmt"
+	"net/http"
+	"html/template"
 	"github.com/OthloTech/OthloCalendar/server/controllers"
 	"github.com/gin-gonic/gin"
 )
@@ -37,7 +38,7 @@ func loadTemplates() {
 
 func IndexRoute(g *gin.Context) {
 	server.SetHTMLTemplate(templates["index"])
-	g.HTML(200, "_base.html", nil)
+	g.HTML(http.StatusOK, "_base.html", nil)
 }
 
 func Init() *gin.Engine {
