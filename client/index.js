@@ -1,9 +1,7 @@
 'use strict'
-//require('riot-mui')
 const riot = require('riot')
 require('./app.tag')
 
-riot.settings.brackets = '{{ }}'
 riot.mount('*')
 
 // Router
