@@ -16,11 +16,11 @@ func defaultConfig() Config {
     gopath := os.Getenv("GOPATH")
     return Config{
         Name:           "GoMicroservices",
-        Port:           80,
+        Port:           8080,
         LogLevel:       4,
         Mode:           "production",
         StaticFileHost: "",
-        StaticFilePath: gopath + "/src/github.com/pottava/golang-microservices/app-webui/app",
+        StaticFilePath: gopath + "/src/github.com/OthloTech/OthloCalendar/server",
         AccessLog:      true,
         SecuredCookie:  false,
     }

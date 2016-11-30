@@ -23,11 +23,11 @@ basic-layout
     console.log(1)
     this.opened = false
     this.logoText = 'material UI'
-    this.open () {
+    this.open = function() {
       this.update({opened: true})
       this.menu.style.left + '0px'
     }
-    this.close () {
+    this.close = function() {
       this.update({opened: false})
       this.menu.style.left = '-100%'
     }
