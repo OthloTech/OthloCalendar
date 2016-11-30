@@ -1,8 +1,10 @@
 'use strict'
+//require('riot-mui')
 const riot = require('riot')
-
 require('./app.tag')
-riot.mount('app')
+
+riot.settings.brackets = '{{ }}'
+riot.mount('*')
 
 // Router
 //require('./router.js')
@@ -10,3 +12,6 @@ riot.mount('app')
 require('./stylesheets/normalize.scss')
 require('./stylesheets/flex-grid.scss')
 require('./stylesheets/default-hljs.scss')
+require('material-design-lite/material.min.css')
+require('material-design-lite/material.min.js')
+require('./stylesheets/style.scss')

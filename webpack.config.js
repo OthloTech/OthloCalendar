@@ -20,7 +20,9 @@ module.exports = {
     ],
     loaders: [
       { test: /\.scss$/, loaders: ["style", "css", "sass"] },
-      { test: /\.js|\.tag$/, exclude: /node_modules/, loader: 'babel-loader' }
+      { test: /\.js|\.tag$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.css$/, loader: "style-loader!css-loader?importLoaders=1" },
+      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
     ]
   },
   devServer: {

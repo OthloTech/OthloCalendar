@@ -16,6 +16,7 @@ import (
 const (
 	connpassEndpoint = "https://connpass.com/api/v1/event/"
 	atndEndpoint     = "http://api.atnd.org/events/"
+	zusaarEndpoint   = "http://www.zusaar.com/api/event/"
 )
 
 func main() {

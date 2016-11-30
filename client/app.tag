@@ -1,5 +1,5 @@
-
 require('./components/layouts/basic-layout.tag')
+
 // require('./components/layouts/home-layout.tag');
 // <app>
 //     <basic-layout if="{{isHome}}" />
@@ -13,5 +13,11 @@ require('./components/layouts/basic-layout.tag')
 // </app>
 
 app
-  basic-layout
+  header
+    burron.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent
+      |Button
+
+    material-navbar
+      div.logo
+        a(href='#') Logo
   h1 hogehoge
