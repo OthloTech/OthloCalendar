@@ -7,12 +7,12 @@
 
     <title>${title} {{define "title"}}{{.Title}}{{end}}</title>
     <meta name="description" content="${description}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.5.0/riot+compiler.min.js"></script>
     <style>${style}</style>
   </head>
 
   <body>
-    <h1>{{.title}}</h1>
   	<app title="Hello, Riot.js"></app>
     <script src="./bundle.js"></script>
   </body>

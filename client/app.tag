@@ -13,11 +13,21 @@ require('./components/layouts/basic-layout.tag')
 // </app>
 
 app
-  header
-    burron.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent
-      |Button
-
-    material-navbar
-      div.logo
-        a(href='#') Logo
-  h1 hogehoge
+  div.mdl-layout.mdl-js-layout
+    header.mdl-layout__header.mdl-layout__header--scroll
+      div.mdl-layout__header-row
+        span.mdl-layout-title OthloCalendar
+        div.mdl-layout-spacer
+        nav.mdl-navigation
+          a.mdl-navigation__link(href='#about') about
+          a.mdl-navigation__link(href='#feature') 特徴
+          a.mdl-navigation__link(href='#function') 機能
+    div.mdl-layout__drawer
+      span.mdl-layout-title OthloCalendar
+      nav.mdl-navigation
+        a.mdl-navigation__link(href='#about') about
+        a.mdl-navigation__link(href='#feature') 特徴
+        a.mdl-navigation__link(href='#function') 機能
+    main.mdl-layout__content
+      div.page-content
+        h1 ここにいろいろ書いていく
